@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.53">
+	<Project ProjectGUID="{E91D8149-E52C-405F-9C5B-1C1B1F6721A7}" Target64Bit="true" ShowHideConfigurations="#x106">
+		<System>
+			<Licenses>
+				<Target>
+					<ManualSelect>{ADDFAE21-8CFE-4AF3-9F46-29C36F985936}</ManualSelect>
+					<ManualSelect>{648F394E-7DD1-499C-8112-7C38E161A94C}</ManualSelect>
+					<ManualSelect>{D58728E0-7762-4145-8A93-80D55E0453A6}</ManualSelect>
+					<ManualSelect>{27326EE5-AB30-4084-B15B-8CCA96CCBF0B}</ManualSelect>
+					<ManualSelect>{5002C16A-02B3-4A8C-8C5C-A65EDD0AE398}</ManualSelect>
+				</Target>
+			</Licenses>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
+		</System>
+		<Plc>
+			<Project GUID="{053C0AF0-F2A4-4263-8499-758CD0903AD2}" Name="PLC1" PrjFilePath="PLC1\PLC1.plcproj" TmcFilePath="PLC1\PLC1.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC1\PLC1.tmc" TmcHash="{87646499-7E9F-B489-407E-773550319BED}">
+					<Name>PLC1 Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Contexts>
+						<Context>
+							<Id>0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+		</Plc>
+	</Project>
+</TcSmProject>

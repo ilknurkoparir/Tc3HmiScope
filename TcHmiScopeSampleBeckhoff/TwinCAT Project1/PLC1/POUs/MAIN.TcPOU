@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <POU Name="MAIN" Id="{065432ae-cb28-4fcb-b550-b2279a827b6d}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	nCount	: INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[nCount := nCount + 1;
+
+IF nCount > 100 THEN
+	nCount := 0;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+      <LineId Id="8" Count="0" />
+      <LineId Id="7" Count="0" />
+      <LineId Id="9" Count="1" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
